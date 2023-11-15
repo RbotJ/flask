@@ -5,6 +5,12 @@
 from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey, DateTime
 from sqlalchemy.orm import declarative_base, relationship
 import os
+<<<<<<< HEAD:Database/database_setup.py
+=======
+from dotenv import load_dotenv
+load_dotenv
+
+>>>>>>> b7b7302 (CSS additions):database_setup.py
 Base = declarative_base()
 
 class Stock(Base):
