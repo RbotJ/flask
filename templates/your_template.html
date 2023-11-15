@@ -1,0 +1,21 @@
+<button id="testApiButton">Test Alpaca API</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $("#testApiButton").click(function(){
+        $.ajax({
+            url: "/test-alpaca-api",
+            type: "GET",
+            success: function(response) {
+                console.log(response);
+                // You can also update the frontend with this response
+            },
+            error: function(xhr) {
+                // Handle error
+                console.log("Error:", xhr.statusText);
+            }
+        });
+    });
+});
+</script>
