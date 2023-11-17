@@ -3,10 +3,8 @@
 #DATABASE_URL environment variable is set correctly in Railway. This will create the 
 #necessary tables in your MySQL database upon deployment
 from sqlalchemy import create_engine, Column, Integer, String, Float, ForeignKey, DateTime
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship
+from sqlalchemy.orm import declarative_base, relationship
 import os
-
 Base = declarative_base()
 
 class Stock(Base):
