@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Stock Alerts</title>
+    <title>Trade Alerts</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Merriweather:wght@300&display=swap" rel="stylesheet">
     <style>
         body, html {
             height: 100%;
             margin: 0;
+            font-family: 'Merriweather', serif;
         }
         .bg {
-            background-image: url('../static/background.png');
+            background-image: url('../static/background.jpg');
             height: 100%;
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
         }
-        .title {
+        .header {
             text-align: center;
             position: relative;
-            top: 50%;
+            top: 40%;
             transform: translateY(-50%);
             color: white;
-            font-size: 50px;
+        }
+        .header-title {
+            font-size: 60px;
+            font-family: 'Roboto', sans-serif;
+            margin-bottom: 20px;
+        }
+        .subtext {
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
     <div class="bg">
-        <div class="title">Hola Mundo</div>
+        <div class="header">
+            <div class="header-title">Trade Alerts</div>
+            <div class="subtext">Tracking the Magnificent 7 and Top Daily Movers</div>
+        </div>
     </div>
 </body>
 </html>
