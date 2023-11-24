@@ -3,6 +3,10 @@ import requests
 import os
 
 app = Flask(__name__)
+from strategy.strategy_blueprint import strategy_blueprint
+
+app.register_blueprint(strategy_blueprint, url_prefix='/strategy')
+
 
 # ... your existing Flask routes ...
 

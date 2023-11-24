@@ -1,0 +1,9 @@
+<!-- HTML form for creating a new strategy -->
+<form method="post" action="{{ url_for('strategy.add_strategy') }}">
+    <label for="name">Strategy Name:</label><br>
+    <input type="text" id="name" name="name"><br>
+    <label for="description">Description:</label><br>
+    <textarea id="description" name="description"></textarea><br>
+    <!-- Add other form fields as necessary -->
+    <input type="submit" value="Create Strategy">
+</form>
