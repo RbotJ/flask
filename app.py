@@ -1,24 +1,16 @@
-from flask import Flask, jsonify, render_template
-import requests
+from flask import Flask, jsonify
 import os
-from flask import Flask
+import requests
+
+# Import blueprints
 from performance.performance_blueprint import performance_bp
-
-app = Flask(__name__)
-
-# Register the performance blueprint
-app.register_blueprint(performance_bp, url_prefix='/api/performance')
-
-
-app = Flask(__name__)
 from strategy.strategy_blueprint import strategy_blueprint
 
-app.register_blueprint(strategy_blueprint, url_prefix='/strategy')
-from flask import Flask
-from performance.performance_api import performance_bp
-
 app = Flask(__name__)
-app.register_blueprint(performance_bp, url_prefix='/api')
+
+# Register blueprints
+app.register_blueprint(performance_bp, url_prefix='/api/performance')
+app.register_blueprint(strategy_blueprint, url_prefix='/strategy')
 
 @app.route('/test-alpaca-api', methods=['GET'])
 def test_alpaca_api():
@@ -35,4 +27,4 @@ def test_alpaca_api():
     response = requests.get(url, headers=headers)
     return jsonify(response.json())  # Return the JSON response
 
-# ... your existing Flask app code ...
+# Rest of your Flask app code...

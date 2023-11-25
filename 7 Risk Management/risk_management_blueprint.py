@@ -1,7 +1,7 @@
 # api/risk_management.py
 
 from flask import Blueprint, request, jsonify
-from models.risk_management import RiskManagement
+from models.models import RiskManagement
 from app import db
 
 risk_management_blueprint = Blueprint('risk_management', __name__)
