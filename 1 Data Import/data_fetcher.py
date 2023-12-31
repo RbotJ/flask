@@ -37,7 +37,7 @@ def fetch_stock_data(symbol, start_date, end_date):
 def main():
     # Example usage
     yesterday = datetime.now() - timedelta(days=1)
-    fetch_stock_data('AAPL', yesterday, datetime.now())
+    fetch_stock_data('TSLA', yesterday, datetime.now())
 
 if __name__ == "__main__":
     main()
