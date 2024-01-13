@@ -12,5 +12,5 @@ requests~=2.31.0
 PyMySQL~=1.1.0
 flake8~=6.1.0
 unittest~=0.0
-cprofile~=1
+profile~=1
 bandit~=1.7.5
